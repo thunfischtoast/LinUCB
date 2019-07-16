@@ -1,5 +1,10 @@
 # LinUCB
-Contextual bandit algorithm called LinUCB / Linear Upper Confidence Bounds as proposed by Li, Langford and Schapire
+Contextual bandit algorithm called LinUCB / Linear Upper Confidence Bounds as proposed by Li, Langford and Schapire.
+
+We implemented the two version, one with disjoint and and one with hybrid linear models, as mentioned in the paper.
+
+See src/de/thunfischtoast/BanditTest.java (https://github.com/thunfischtoast/LinUCB/blob/master/src/de/thunfischtoast/BanditTest.java) for basic usage example as inspired by http://john-maxwell.com/post/2017-03-17/ .
+
 
 Reference:
 ```
