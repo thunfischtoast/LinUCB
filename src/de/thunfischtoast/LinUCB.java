@@ -141,7 +141,8 @@ public class LinUCB {
             RealMatrix secondProduct = x_t.multiply(A_a_inverse[i]).multiply(x);
             double secondElement = secondProduct.getEntry(0, 0);
 
-            RealMatrix firstProduct = theta_hat_a[i].multiply(x_t);
+            // RealMatrix firstProduct = theta_hat_a[i].multiply(x_t);   // Bug, all arms tried equally when context starts with a zero
+            RealMatrix firstProduct = (theta_hat_a[i]).transpose().multiply(x); // Fixes bug in BanditTest_LinUCB_Context_Of_Zero test and matches the mathematical algo
             double firstElement = firstProduct.getEntry(0, 0);
 
             double secondElementSqTimesAlpha = alpha * Math.sqrt(Math.abs(secondElement));
